@@ -163,6 +163,7 @@ src/
 - **profiles**: Anyone can read; users can only edit their own
 - **jobs**: Anyone can view; only the employer who created can edit/delete
 - **applications**: Jobseeker can see their own; employer can see apps on their jobs; only employer can update status
+- **Live Demo**: https://startup0km-ats-elrm.vercel.app/
 
 ---
 
