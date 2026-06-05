@@ -132,6 +132,17 @@ See `supabase_schema.sql` for the full SQL with RLS policies.
 
 ---
 
+
+## 📸Screenshots
+<img width="1348" height="656" alt="Dashboard" src="https://github.com/user-attachments/assets/bfc241a0-468d-4d9d-bce9-611abab81c54" />
+<img width="1352" height="651" alt="JOBS" src="https://github.com/user-attachments/assets/301d3bbb-5c41-4e20-bcb6-989a389899e8" />
+<img width="1344" height="654" alt="JOB Seeker" src="https://github.com/user-attachments/assets/c569ae2b-719c-4a5d-a0a5-e8c7e5e71dd2" />
+
+
+
+
+
+
 ## 📋 Project Structure
 
 ```
