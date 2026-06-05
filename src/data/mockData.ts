@@ -27,35 +27,35 @@ export interface Application {
 
 export const MOCK_JOBS: Job[] = [
   {
-    id: "job1", title: "Senior Frontend Engineer", company: "Startup0km",
+    id: "job1", title: "Senior Frontend Engineer", company: "HireFlow",
     location: "Buenos Aires, AR", type: "Full-time",
     description: "We're looking for a senior frontend engineer to lead our React-based platform development. You'll work closely with design and product to build world-class hiring tools.",
     requirements: ["5+ years React experience", "TypeScript proficiency", "Experience with design systems", "Strong communication skills"],
     salary: "$120k - $160k", status: "Open", postedAt: "2026-03-15", employerId: "emp1",
   },
   {
-    id: "job2", title: "Backend Developer", company: "Startup0km",
+    id: "job2", title: "Backend Developer", company: "HireFlow",
     location: "Remote", type: "Remote",
     description: "Join our backend team to build scalable APIs and microservices using Node.js and PostgreSQL. Focus on performance and reliability.",
     requirements: ["3+ years Node.js", "PostgreSQL experience", "API design", "Docker & CI/CD"],
     salary: "$100k - $140k", status: "Open", postedAt: "2026-03-12", employerId: "emp1",
   },
   {
-    id: "job3", title: "Product Designer", company: "Startup0km",
+    id: "job3", title: "Product Designer", company: "HireFlow",
     location: "Buenos Aires, AR", type: "Full-time",
     description: "Design intuitive, beautiful interfaces for our ATS platform. Work with engineers to ship polished features.",
     requirements: ["Figma expertise", "Design systems experience", "User research skills", "3+ years product design"],
     salary: "$90k - $130k", status: "Open", postedAt: "2026-03-10", employerId: "emp1",
   },
   {
-    id: "job4", title: "DevOps Engineer", company: "Startup0km",
+    id: "job4", title: "DevOps Engineer", company: "HireFlow",
     location: "Remote", type: "Contract",
     description: "Help us build and maintain our cloud infrastructure on AWS. Focus on automation, monitoring, and security.",
     requirements: ["AWS expertise", "Terraform/IaC", "Kubernetes", "Monitoring & alerting"],
     salary: "$110k - $150k", status: "Open", postedAt: "2026-03-08", employerId: "emp1",
   },
   {
-    id: "job5", title: "Data Analyst", company: "Startup0km",
+    id: "job5", title: "Data Analyst", company: "HireFlow",
     location: "Buenos Aires, AR", type: "Part-time",
     description: "Analyze hiring trends and platform metrics to drive product decisions. Build dashboards and reports.",
     requirements: ["SQL proficiency", "Python/R", "Data visualization", "Statistical analysis"],

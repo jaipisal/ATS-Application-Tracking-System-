@@ -1,6 +1,6 @@
-# 👋ATS (Application Tracking System)— MVP Submission
+# 👋 HireFlow ATS — MVP Submission
 
-**A professional, AI-powered Applicant Tracking System (ATS) built for the Startup0km assignment.**  
+**A professional, AI-powered Applicant Tracking System (ATS) built for the HireFlow assignment.**  
 Built with **React 18 + Vite + TypeScript + Supabase (PostgreSQL)**.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black)](https://startup0km-ats-elrm.vercel.app/)

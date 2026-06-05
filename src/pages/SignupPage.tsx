@@ -93,7 +93,10 @@ const SignupPage = () => {
       setSuccess(true);
       setTimeout(() => navigate(role === "employer" ? "/employer" : "/jobseeker"), 1500);
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Signup failed. Please try again.";
+      let msg = err instanceof Error ? err.message : "Signup failed. Please try again.";
+      if (msg.toLowerCase().includes("fetch") || msg.toLowerCase().includes("network") || msg.toLowerCase().includes("api")) {
+        msg = "Unable to connect to the database. This usually means your Supabase project is disabled or inactive. Please update VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your .env file.";
+      }
       setError(msg);
     } finally {
       setLoading(false);

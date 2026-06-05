@@ -75,7 +75,10 @@ const LoginPage = () => {
     try {
       await login(email, password);
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Login failed. Check your email and password.";
+      let msg = err instanceof Error ? err.message : "Login failed. Check your email and password.";
+      if (msg.toLowerCase().includes("fetch") || msg.toLowerCase().includes("network") || msg.toLowerCase().includes("api")) {
+        msg = "Unable to connect to the database. This usually means your Supabase project is disabled or inactive. Please update VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your .env file.";
+      }
       setError(msg);
       setLoading(false);
     }

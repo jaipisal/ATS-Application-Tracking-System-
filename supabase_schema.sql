@@ -1,5 +1,5 @@
 -- ============================================================
--- Startup0km ATS — Complete Database Schema
+-- HireFlow ATS — Complete Database Schema
 -- Run this entire file in the Supabase SQL Editor
 -- ============================================================
 
@@ -110,6 +110,12 @@ CREATE POLICY "profiles_update_own"
 -- Anyone (including anonymous) can view open jobs
 CREATE POLICY "jobs_select_open"
   ON public.jobs FOR SELECT USING (status = 'Open');
+
+-- Employers can view all of their own jobs (even closed ones)
+CREATE POLICY "jobs_select_owner"
+  ON public.jobs FOR SELECT
+  TO authenticated
+  USING (auth.uid() = employer_id);
 
 -- Only employers can insert jobs (for themselves)
 CREATE POLICY "jobs_insert_employer"
