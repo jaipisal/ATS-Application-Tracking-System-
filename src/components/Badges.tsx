@@ -1,4 +1,4 @@
-import { ApplicationStatus } from "@/data/mockData";
+import { ApplicationStatus } from "@/lib/supabase";
 
 interface MatchScoreBadgeProps {
   score: number;

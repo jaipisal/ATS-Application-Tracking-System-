@@ -150,7 +150,7 @@ const CandidatePipeline = () => {
       </div>
 
       {/* Kanban Board */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 items-start">
         {STAGES.map((stage, stageIdx) => {
           const stageApps = filtered.filter((a) => a.status === stage);
           return (

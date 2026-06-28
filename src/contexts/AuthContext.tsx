@@ -40,26 +40,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Load session on mount and listen for changes
   useEffect(() => {
-    // Get existing session (fast, reads from local storage)
+    const loadUser = async (userId: string) => {
+      const { data } = await supabase.from("profiles").select("*").eq("id", userId).single();
+      if (data) setUser(data as Profile);
+    };
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
-      if (session) {
-        setUser(constructProfileFromUser(session.user));
-      }
-      setLoading(false);
+      if (session) loadUser(session.user.id).finally(() => setLoading(false));
+      else setLoading(false);
     });
 
-    // Listen for auth changes (login, logout, token refresh)
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
       if (session) {
-        setUser(constructProfileFromUser(session.user));
+        loadUser(session.user.id).finally(() => setLoading(false));
       } else {
         setUser(null);
+        setLoading(false);
       }
-      setLoading(false);
     });
 
     return () => subscription.unsubscribe();

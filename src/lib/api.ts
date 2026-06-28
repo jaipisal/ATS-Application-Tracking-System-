@@ -55,7 +55,7 @@ export async function fetchOpenJobs(): Promise<Job[]> {
   const { data, error } = await supabase
     .from("jobs")
     .select("*")
-    .in("status", ["Open", "Closed"])
+    .eq("status", "Open")
     .order("created_at", { ascending: false });
 
   if (error) throw error;
